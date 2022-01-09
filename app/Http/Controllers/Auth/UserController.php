@@ -109,9 +109,38 @@ class UserController extends Controller
 
     public function profile()
     {
+        try {
+            return response()->json([
+                "ok" => true,
+                "message" => "Información de usuario",
+                "user" => auth()->user()
+            ], 200);
+        } catch (Exception $e) {
+            //if exists an error unexpected
+            return response()->json([
+                "ok" => false,
+                "message" => "Ha ocurrido un error inesperado " . $e
+            ], 400);
+        }
     }
 
     public function logout()
     {
+        try {
+            //Delete token
+            auth()->user()->tokens()->delete();
+
+            //Send response
+            return response()->json([
+                "ok" => true,
+                "message" => "Cierre de sesion exitoso"
+            ], 200);
+        } catch (Exception $e) {
+            //if exists an error unexpected
+            return response()->json([
+                "ok" => false,
+                "message" => "Ha ocurrido un error inesperado " . $e
+            ], 400);
+        }
     }
 }
