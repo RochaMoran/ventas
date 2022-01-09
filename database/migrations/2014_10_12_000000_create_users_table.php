@@ -20,7 +20,8 @@ class CreateUsersTable extends Migration
             $table->boolean('facebook')->nullable();
             $table->boolean('google')->nullable();
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
+            $table->string('password')->nullable();
+            $table->string('external_id')->nullable();
         });
     }
 

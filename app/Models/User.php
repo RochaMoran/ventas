@@ -21,7 +21,8 @@ class User extends Authenticatable
         'email',
         'password',
         'google',
-        'facebook'
+        'facebook',
+        'external_id'
     ];
 
     protected $casts = [
