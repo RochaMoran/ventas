@@ -47,7 +47,6 @@ class UserController extends Controller
             ], 200);
 
         } catch (Exception $e) {
-            
             //if exists an error unexpected
             return response()->json([
                 "ok" => false,
@@ -58,6 +57,54 @@ class UserController extends Controller
 
     public function login(Request $request)
     {
+        try {
+            //validations of the inputs
+            $validator = Validator::make($request->all(), [
+                'email' => 'required|email',
+                'password' => 'required'
+            ]);
+
+            //verificated if exists errors
+            if ($validator->fails()) {
+                return response()->json([
+                    "ok" => false,
+                    "message" => $validator->errors()->first()
+                ], 400);
+            }
+
+            //search user in database 
+            $user = User::where("email", "=", $request->email)->first();
+
+            if(isset($user->id)){
+                //comparing password database with password input
+                if(Hash::check($request->password, $user->password)){
+                    $token = $user->createToken("auth_token")->plainTextToken;
+
+                    return response()->json([
+                        "ok" => true,
+                        "message" => "Inicio de sesion exitoso",
+                        "token" => $token
+                    ], 200);
+
+                } else {
+                    return response()->json([
+                        "ok" => false,
+                        "message" => "La contraseña es incorrecta"
+                    ], 400);
+                }
+            } else {
+                return response()->json([
+                    "ok" => false,
+                    "message" => "No existe una cuenta con este correo"
+                ], 400);
+            }
+        } catch (Exception $e) {
+            //if exists an error unexpected
+            return response()->json([
+                "ok" => false,
+                "message" => "Ha ocurrido un error inesperado " . $e
+            ], 400);
+        }
     }
 
     public function profile()
