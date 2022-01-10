@@ -27,7 +27,7 @@ class UserController extends Controller
                 return response()->json([
                     "ok" => false,
                     "message" => $validator->errors()->first()
-                ], 400);
+                ], 200);
             }
 
             //Created user if not exists errors
