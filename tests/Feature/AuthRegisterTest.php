@@ -22,12 +22,11 @@ class AuthRegisterTest extends TestCase
 
         $response = $this->post('/api/register', $formData);
         $response->assertOk();
-        $this->assertCount(1, User::all());
 
         $user = User::first();
 
-        $this->assertEquals($user->name, 'Steven Rocha');
-        $this->assertEquals($user->email, 'rochastiven125@gmail.com');
+        $this->assertEquals($user->name, 'Rocha Moran');
+        $this->assertEquals($user->email, 'rochamoran1@gmail.com');
 
     }
 }

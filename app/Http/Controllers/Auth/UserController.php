@@ -51,7 +51,7 @@ class UserController extends Controller
             return response()->json([
                 "ok" => false,
                 "message" => "Ha ocurrido un error inesperado " . $e
-            ], 400);
+            ], 200);
         }
     }
 
@@ -69,7 +69,7 @@ class UserController extends Controller
                 return response()->json([
                     "ok" => false,
                     "message" => $validator->errors()->first()
-                ], 400);
+                ], 200);
             }
 
             //search user in database 
@@ -90,20 +90,20 @@ class UserController extends Controller
                     return response()->json([
                         "ok" => false,
                         "message" => "La contraseña es incorrecta"
-                    ], 400);
+                    ], 200);
                 }
             } else {
                 return response()->json([
                     "ok" => false,
                     "message" => "No existe una cuenta con este correo"
-                ], 400);
+                ], 200);
             }
         } catch (Exception $e) {
             //if exists an error unexpected
             return response()->json([
                 "ok" => false,
                 "message" => "Ha ocurrido un error inesperado " . $e
-            ], 400);
+            ], 200);
         }
     }
 
