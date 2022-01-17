@@ -83,9 +83,9 @@ class CategoryController extends Controller
                 ], 200);
             }
 
-            $category = Category::findOrFail($id);
+            $category = Category::where("id", "=", $id)->first();
 
-            if (isEmpty($category)) {
+            if ($category) {
                 //retornar response in format json.
                 return response()->json([
                     "ok" => true,
@@ -123,16 +123,24 @@ class CategoryController extends Controller
                 ], 200);
             }
 
-            $category = Category::findOrFail($id);
-            $category->name_category = $request->name_category;
-            $category->save();
+            $category = Category::where("id", "=", $id)->first();
 
-            //retornar response in format json.
-            return response()->json([
-                "ok" => true,
-                "message" => "Categoria editada exitosamente",
-                "data" => $category
-            ], 200);
+            if($category) {
+                $category->name_category = $request->name_category;
+                $category->save();
+    
+                //retornar response in format json.
+                return response()->json([
+                    "ok" => true,
+                    "message" => "Categoria editada exitosamente",
+                    "data" => $category
+                ], 200);
+            } else {
+                return response()->json([
+                    "ok" => false,
+                    "message" => "La categoria que intentas editar no existe"
+                ], 200);
+            }
         } catch (Exception $e) {
             //if exists an error unexpected
             return response()->json([
@@ -145,13 +153,21 @@ class CategoryController extends Controller
     public function destroy($id)
     {
         try {
-            $category = Category::findOrFail($id);
-            $category->delete();
+            $category = Category::where("id", "=", $id)->first();
+            
+            if($category) {
+                $category->delete();
 
-            return response()->json([
-                "ok" => true,
-                "message" => "Categoria eliminada exitosamente"
-            ], 200);
+                return response()->json([
+                    "ok" => true,
+                    "message" => "Categoria eliminada exitosamente"
+                ], 200);
+            } else {
+                return response()->json([
+                    "ok" => false,
+                    "message" => "La categoria que intentas eliminar no existe"
+                ], 200);
+            }
         } catch (Exception $e) {
             //if exists an error unexpected
             return response()->json([
