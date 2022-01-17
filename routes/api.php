@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\CategoryController;
+use App\Http\Controllers\Api\ClientController;
 use App\Http\Controllers\Api\MarkController;
 use App\Http\Controllers\Api\ProviderController;
 use App\Http\Controllers\Auth\GoogleController;
@@ -41,6 +42,14 @@ Route::group(['middleware' => ["auth:sanctum"]], function () {
     Route::get('/provider/{id}', [ProviderController::class, 'show']);
     Route::post('/provider/update/{id}', [ProviderController::class, 'update']);
     Route::delete('/provider/{id}', [ProviderController::class, 'destroy']);
+
+    //Client
+    Route::get('/client/all', [ClientController::class, 'index']);
+    Route::post('/client/create', [ClientController::class, 'store']);
+    Route::get('/client/{id}', [ClientController::class, 'show']);
+    Route::post('/client/update/{id}', [ClientController::class, 'update']);
+    Route::delete('/client/{id}', [ClientController::class, 'destroy']);
+
 });
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
