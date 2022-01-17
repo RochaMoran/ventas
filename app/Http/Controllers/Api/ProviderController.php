@@ -84,9 +84,9 @@ class ProviderController extends Controller
                 ], 200);
             }
 
-            $provider = Provider::findOrFail($id);
+            $provider = Provider::where("id", "=", $id)->first();
 
-            if (isEmpty($provider)) {
+            if ($provider) {
                 //retornar response in format json.
                 return response()->json([
                     "ok" => true,
@@ -125,17 +125,25 @@ class ProviderController extends Controller
                 ], 200);
             }
 
-            $provider = Provider::findOrFail($id);
-            $provider->name_provider = $request->name_provider;
-            $provider->phone_provider = $request->phone_provider;
-            $provider->save();
+            $provider = Provider::where("id", "=", $id)->first();
 
-            //retornar response in format json.
-            return response()->json([
-                "ok" => true,
-                "message" => "Proveedor editado exitosamente",
-                "data" => $provider
-            ], 200);
+            if ($provider) {
+                $provider->name_provider = $request->name_provider;
+                $provider->phone_provider = $request->phone_provider;
+                $provider->save();
+
+                //retornar response in format json.
+                return response()->json([
+                    "ok" => true,
+                    "message" => "Proveedor editado exitosamente",
+                    "data" => $provider
+                ], 200);
+            } else {
+                return response()->json([
+                    "ok" => false,
+                    "message" => "El proveedor que intentas editar no existe"
+                ], 200);
+            }
         } catch (Exception $e) {
             //if exists an error unexpected
             return response()->json([
@@ -148,13 +156,21 @@ class ProviderController extends Controller
     public function destroy($id)
     {
         try {
-            $provider = Provider::findOrFail($id);
-            $provider->delete();
+            $provider = Provider::where("id", "=", $id)->first();
 
-            return response()->json([
-                "ok" => true,
-                "message" => "Proveedor eliminado exitosamente"
-            ], 200);
+            if ($provider) {
+                $provider->delete();
+
+                return response()->json([
+                    "ok" => true,
+                    "message" => "Proveedor eliminado exitosamente"
+                ], 200);
+            } else {
+                return response()->json([
+                    "ok" => false,
+                    "message" => "El proveedor que intentas eliminar no existe"
+                ], 200);
+            }
         } catch (Exception $e) {
             //if exists an error unexpected
             return response()->json([

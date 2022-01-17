@@ -84,9 +84,9 @@ class ClientController extends Controller
                 ], 200);
             }
 
-            $client = Client::findOrFail($id);
+            $client = Client::where("id", "=", $id)->first();
 
-            if (isEmpty($client)) {
+            if ($client) {
                 //retornar response in format json.
                 return response()->json([
                     "ok" => true,
@@ -125,17 +125,25 @@ class ClientController extends Controller
                 ], 200);
             }
 
-            $client = Client::findOrFail($id);
-            $client->name_client = $request->name_client;
-            $client->phone_client = $request->phone_client;
-            $client->save();
+            $client = Client::where("id", "=", $id)->first();
 
-            //retornar response in format json.
-            return response()->json([
-                "ok" => true,
-                "message" => "Cliente editado exitosamente",
-                "data" => $client
-            ], 200);
+            if($client) {
+                $client->name_client = $request->name_client;
+                $client->phone_client = $request->phone_client;
+                $client->save();
+    
+                //retornar response in format json.
+                return response()->json([
+                    "ok" => true,
+                    "message" => "Cliente editado exitosamente",
+                    "data" => $client
+                ], 200);
+            } else {
+                return response()->json([
+                    "ok" => false,
+                    "message" => "El cliente que intentas editar no existe"
+                ], 200);
+            }
         } catch (Exception $e) {
             //if exists an error unexpected
             return response()->json([
@@ -148,13 +156,21 @@ class ClientController extends Controller
     public function destroy($id)
     {
         try {
-            $client = Client::findOrFail($id);
-            $client->delete();
+            $client = Client::where("id", "=", $id)->first();
+            
+            if($client) {
+                $client->delete();
 
-            return response()->json([
-                "ok" => true,
-                "message" => "Cliente eliminado exitosamente"
-            ], 200);
+                return response()->json([
+                    "ok" => true,
+                    "message" => "Cliente eliminado exitosamente"
+                ], 200);
+            } else {
+                return response()->json([
+                    "ok" => false,
+                    "message" => "El cliente que intentas eliminar no existe"
+                ], 200);
+            }
         } catch (Exception $e) {
             //if exists an error unexpected
             return response()->json([

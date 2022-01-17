@@ -82,9 +82,9 @@ class MarkController extends Controller
                 ], 200);
             }
 
-            $mark = Mark::findOrFail($id);
+            $mark = Mark::where("id", "=", $id)->first();
 
-            if (isEmpty($mark)) {
+            if ($mark) {
                 //retornar response in format json.
                 return response()->json([
                     "ok" => true,
@@ -122,16 +122,24 @@ class MarkController extends Controller
                 ], 200);
             }
 
-            $mark = Mark::findOrFail($id);
-            $mark->name_mark = $request->name_mark;
-            $mark->save();
+            $mark = Mark::where("id", "=", $id)->first();
 
-            //retornar response in format json.
-            return response()->json([
-                "ok" => true,
-                "message" => "Marca editada exitosamente",
-                "data" => $mark
-            ], 200);
+            if($mark) {
+                $mark->name_mark = $request->name_mark;
+                $mark->save();
+    
+                //retornar response in format json.
+                return response()->json([
+                    "ok" => true,
+                    "message" => "Marca editada exitosamente",
+                    "data" => $mark
+                ], 200);
+            } else {
+                return response()->json([
+                    "ok" => false,
+                    "message" => "La marca que intentas editar no existe"
+                ], 200);
+            }
         } catch (Exception $e) {
             //if exists an error unexpected
             return response()->json([
@@ -144,13 +152,21 @@ class MarkController extends Controller
     public function destroy($id)
     {
         try {
-            $mark = Mark::findOrFail($id);
-            $mark->delete();
+            $mark = Mark::where("id", "=", $id)->first();
+            
+            if($mark) {
+                $mark->delete();
 
-            return response()->json([
-                "ok" => true,
-                "message" => "Marca eliminada exitosamente"
-            ], 200);
+                return response()->json([
+                    "ok" => true,
+                    "message" => "Marca eliminado exitosamente"
+                ], 200);
+            } else {
+                return response()->json([
+                    "ok" => false,
+                    "message" => "La marca que intentas eliminar no existe"
+                ], 200);
+            }
         } catch (Exception $e) {
             //if exists an error unexpected
             return response()->json([
