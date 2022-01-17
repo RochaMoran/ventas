@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\CategoryController;
+use App\Http\Controllers\Api\MarkController;
 use App\Http\Controllers\Auth\GoogleController;
 use App\Http\Controllers\Auth\UserController;
 use Illuminate\Http\Request;
@@ -25,6 +26,13 @@ Route::group(['middleware' => ["auth:sanctum"]], function () {
     Route::get('/category/{id}', [CategoryController::class, 'show']);
     Route::post('/category/update/{id}', [CategoryController::class, 'update']);
     Route::delete('/category/{id}', [CategoryController::class, 'destroy']);
+   
+    //Marcas
+    Route::get('/mark/all', [MarkController::class, 'index']);
+    Route::post('/mark/create', [MarkController::class, 'store']);
+    Route::get('/mark/{id}', [MarkController::class, 'show']);
+    Route::post('/mark/update/{id}', [MarkController::class, 'update']);
+    Route::delete('/mark/{id}', [MarkController::class, 'destroy']);
 });
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {

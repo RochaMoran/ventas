@@ -17,7 +17,7 @@ class GoogleController extends Controller
         $userExist = User::where("email", "=", $user->email)->first();
 
         if(isset($userExist->id)) {
-            if(User::where('external_id', $user->external_id)->where('google', true)->first()) {
+            if(User::where('external_id', $user->id)->where('google', true)->first()) {
                 $token = $userExist->createToken("auth_token")->plainTextToken;
 
                 return response()->json([
