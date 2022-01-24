@@ -13,6 +13,7 @@ class Detail_Facture extends Model
 
     protected $fillable = [
         'cant',
+        'price',
         'subtotal',
         'id_facture',
         'id_product'

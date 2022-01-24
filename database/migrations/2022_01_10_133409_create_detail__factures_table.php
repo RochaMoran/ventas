@@ -15,6 +15,7 @@ class CreateDetailFacturesTable extends Migration
     {
         Schema::create('detail__factures', function (Blueprint $table) {
             $table->id();
+            $table->double('price');
             $table->double('subtotal');
             $table->integer('cant');
             $table->unsignedBigInteger('id_facture');
