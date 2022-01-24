@@ -5392,12 +5392,86 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ NavBar)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _assets_icons_home_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../assets/icons/home.png */ "./resources/js/src/assets/icons/home.png");
+/* harmony import */ var _assets_icons_factura_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../assets/icons/factura.png */ "./resources/js/src/assets/icons/factura.png");
+/* harmony import */ var _assets_icons_clients_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../assets/icons/clients.png */ "./resources/js/src/assets/icons/clients.png");
+/* harmony import */ var _assets_icons_products_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../assets/icons/products.png */ "./resources/js/src/assets/icons/products.png");
+/* harmony import */ var _assets_icons_categories_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../assets/icons/categories.png */ "./resources/js/src/assets/icons/categories.png");
+/* harmony import */ var _assets_icons_providers_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../assets/icons/providers.png */ "./resources/js/src/assets/icons/providers.png");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+
+
 
 
 function NavBar() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-    children: "NavBar"
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
+    className: "navbar",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("img", {
+      className: "navbar-logo",
+      src: "https://ventopobox.com/wp-content/uploads/2020/11/logo-home.png"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("ul", {
+      className: "navbar-items",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("li", {
+        className: "navbar-item navbar-",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("img", {
+          className: "navbar-item__icon",
+          src: _assets_icons_home_png__WEBPACK_IMPORTED_MODULE_1__["default"]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("p", {
+          className: "navbar-item__name",
+          children: "Inicio"
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("li", {
+        className: "navbar-item navbar-",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("img", {
+          className: "navbar-item__icon",
+          src: _assets_icons_factura_png__WEBPACK_IMPORTED_MODULE_2__["default"]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("p", {
+          className: "navbar-item__name",
+          children: "Facturar"
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("li", {
+        className: "navbar-item navbar-",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("img", {
+          className: "navbar-item__icon",
+          src: _assets_icons_clients_png__WEBPACK_IMPORTED_MODULE_3__["default"]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("p", {
+          className: "navbar-item__name",
+          children: "Clientes"
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("li", {
+        className: "navbar-item navbar-",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("img", {
+          className: "navbar-item__icon",
+          src: _assets_icons_products_png__WEBPACK_IMPORTED_MODULE_4__["default"]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("p", {
+          className: "navbar-item__name",
+          children: "Productos"
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("li", {
+        className: "navbar-item navbar-",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("img", {
+          className: "navbar-item__icon",
+          src: _assets_icons_categories_png__WEBPACK_IMPORTED_MODULE_5__["default"]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("p", {
+          className: "navbar-item__name",
+          children: "Categorias"
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("li", {
+        className: "navbar-item navbar-",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("img", {
+          className: "navbar-item__icon",
+          src: _assets_icons_providers_png__WEBPACK_IMPORTED_MODULE_6__["default"]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("p", {
+          className: "navbar-item__name",
+          children: "Proveedores"
+        })]
+      })]
+    })]
   });
 }
 
@@ -10607,13 +10681,40 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_components_topbar_styles_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! -!../../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!../components/topbar/styles.css */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./resources/js/src/components/topbar/styles.css");
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_components_navbar_styles_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! -!../../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!../components/navbar/styles.css */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./resources/js/src/components/navbar/styles.css");
 // Imports
+
 
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 ___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_components_topbar_styles_css__WEBPACK_IMPORTED_MODULE_1__["default"]);
+___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_components_navbar_styles_css__WEBPACK_IMPORTED_MODULE_2__["default"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ":root {\r\n    --back-color-primary: #181818;\r\n    --back-color-secondary: #1D1D1D;\r\n    --back-color-third: #363636;\r\n    --font-color-primary: #909090;\r\n    --color-primary: #3369F3;\r\n    --color-error: #BF3F3F;\r\n}\r\n\r\n.container-input {\r\n    background-color: var(--back-color-third);\r\n    border-radius: 15px;\r\n    padding: 3px 15px;\r\n}\r\n\r\n.input-icon {\r\n    width: 15px;\r\n}\r\n\r\n.input {\r\n    outline: none;\r\n    border: none;\r\n    color: var(--font-color-primary);\r\n    background-color: transparent;\r\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ":root {\r\n    --back-color-primary: #181818;\r\n    --back-color-secondary: #1D1D1D;\r\n    --back-color-third: #363636;\r\n    --font-color-primary: #909090;\r\n    --color-primary: #3369F3;\r\n    --color-error: #BF3F3F;\r\n}\r\n\r\n.container-input {\r\n    background-color: var(--back-color-third);\r\n    border-radius: 15px;\r\n    padding: 3px 15px;\r\n}\r\n\r\n.input-icon {\r\n    width: 15px;\r\n}\r\n\r\n.input {\r\n    outline: none;\r\n    border: none;\r\n    color: var(--font-color-primary);\r\n    background-color: transparent;\r\n}\r\n\r\nul {\r\n    list-style: none;\r\n    margin: 0;\r\n    padding: 0;\r\n}", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./resources/js/src/components/navbar/styles.css":
+/*!**********************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./resources/js/src/components/navbar/styles.css ***!
+  \**********************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".navbar {\r\n    background-color: var(--back-color-primary);\r\n    width: 200px;\r\n    height: calc(100vh - 50px);\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: flex-start;\r\n    align-items: center;\r\n    gap: 20px;\r\n}\r\n\r\n.navbar-logo {\r\n    width: 100px;\r\n}\r\n\r\n.navbar-items {\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    justify-content: center;\r\n    width: 100%;\r\n    gap: 5px;\r\n}\r\n\r\n.navbar-item {\r\n    display: flex;\r\n    flex-direction: row;\r\n    width: 70%;\r\n    justify-content: start;\r\n    align-items: center;\r\n    gap: 15px;\r\n    cursor: pointer;\r\n}\r\n\r\n.navbar-item__icon {\r\n    width: 25px;\r\n}\r\n\r\n.navbar-item__name {\r\n    color: white;\r\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -10717,6 +10818,96 @@ module.exports = function (cssWithMappingToString) {
 
   return list;
 };
+
+/***/ }),
+
+/***/ "./resources/js/src/assets/icons/categories.png":
+/*!******************************************************!*\
+  !*** ./resources/js/src/assets/icons/categories.png ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/categories.png?2fb78e8ed1fff1307d95cca41dd5e440");
+
+/***/ }),
+
+/***/ "./resources/js/src/assets/icons/clients.png":
+/*!***************************************************!*\
+  !*** ./resources/js/src/assets/icons/clients.png ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/clients.png?945dd144e046e23b00cee1d6410e3a4d");
+
+/***/ }),
+
+/***/ "./resources/js/src/assets/icons/factura.png":
+/*!***************************************************!*\
+  !*** ./resources/js/src/assets/icons/factura.png ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/factura.png?9c1c761c3d76e6026579f007db379efd");
+
+/***/ }),
+
+/***/ "./resources/js/src/assets/icons/home.png":
+/*!************************************************!*\
+  !*** ./resources/js/src/assets/icons/home.png ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/home.png?d3367a9291135fe9168e50cc78d12372");
+
+/***/ }),
+
+/***/ "./resources/js/src/assets/icons/products.png":
+/*!****************************************************!*\
+  !*** ./resources/js/src/assets/icons/products.png ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/products.png?5c0e3c9b377a91dc470c2e971c8b9e1d");
+
+/***/ }),
+
+/***/ "./resources/js/src/assets/icons/providers.png":
+/*!*****************************************************!*\
+  !*** ./resources/js/src/assets/icons/providers.png ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/providers.png?d15c8b3e426a7f80eb21c222cb440c13");
 
 /***/ }),
 
