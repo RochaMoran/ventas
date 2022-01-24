@@ -1,0 +1,51 @@
+.topbar {
+    background-color: var(--back-color-primary);
+    height: 50px;
+    width: 100%;
+}
+
+.topbar-collapse,
+.topbar-profile {
+    display: flex;
+}
+
+.topbar-collapse {
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    height: 100%;
+    margin: auto;
+}
+
+.topbar-profile__image {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.topbar-profile {
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.topbar-profile__name,
+.topbar-profile__role {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.topbar-profile__name {
+    top: 3px;
+    color: white;
+    font-weight: bold;
+}
+
+.topbar-profile__role {
+    bottom: 3px;
+    font-size: .7rem;
+    font-weight: lighter;
+    color: var(--font-color-primary);
+}

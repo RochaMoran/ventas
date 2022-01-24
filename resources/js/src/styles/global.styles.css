@@ -1,0 +1,28 @@
+:root {
+    --back-color-primary: #181818;
+    --back-color-secondary: #1D1D1D;
+    --back-color-third: #363636;
+    --font-color-primary: #909090;
+    --color-primary: #3369F3;
+    --color-error: #BF3F3F;
+}
+
+.container-input {
+    background-color: var(--back-color-third);
+    border-radius: 15px;
+    padding: 3px 15px;
+}
+
+.input-icon {
+    width: 15px;
+}
+
+.input {
+    outline: none;
+    border: none;
+    color: var(--font-color-primary);
+    background-color: transparent;
+}
+
+
+@import url('../components/topbar/styles.css');
