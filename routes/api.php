@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\CategoryController;
 use App\Http\Controllers\Api\ClientController;
+use App\Http\Controllers\Api\FactureController;
 use App\Http\Controllers\Api\MarkController;
 use App\Http\Controllers\Api\PaymentController;
 use App\Http\Controllers\Api\ProductController;
@@ -65,6 +66,13 @@ Route::group(['middleware' => ["auth:sanctum"]], function () {
     Route::get('/product/{id}', [ProductController::class, 'show']);
     Route::post('/product/update/{id}', [ProductController::class, 'update']);
     Route::delete('/product/{id}', [ProductController::class, 'destroy']);
+
+    //Facture
+    Route::get('/facture/all', [FactureController::class, 'index']);
+    Route::post('/facture/create', [FactureController::class, 'store']);
+    Route::get('/facture/{id}', [FactureController::class, 'show']);
+    Route::post('/facture/update/{id}', [FactureController::class, 'update']);
+    Route::delete('/facture/{id}', [FactureController::class, 'destroy']);
 });
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
