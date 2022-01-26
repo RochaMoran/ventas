@@ -48,6 +48,11 @@
     color: var(--font-color-primary);
 }
 
+.input-icon {
+    color: var(--font-color-primary);
+    font-size: 1.5rem;
+}
+
 @media screen and (max-width: 400px) {
     .topbar-searcher {
         display: none;
