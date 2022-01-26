@@ -5405,14 +5405,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function Dashboard() {
+function Dashboard(_ref) {
+  var children = _ref.children;
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
     className: "dashboard",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_topbar_index__WEBPACK_IMPORTED_MODULE_2__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_navbar_index__WEBPACK_IMPORTED_MODULE_1__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
       className: "dashboard-main",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-        children: "Content"
-      })
+      children: children
     })]
   });
 }
@@ -5584,6 +5583,81 @@ function NavBar() {
 
 /***/ }),
 
+/***/ "./resources/js/src/components/pages/category/index.jsx":
+/*!**************************************************************!*\
+  !*** ./resources/js/src/components/pages/category/index.jsx ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Category)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _dashboard_index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../dashboard/index */ "./resources/js/src/components/dashboard/index.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+function Category() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_dashboard_index__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    children: "Category"
+  });
+}
+
+/***/ }),
+
+/***/ "./resources/js/src/components/pages/clients/index.jsx":
+/*!*************************************************************!*\
+  !*** ./resources/js/src/components/pages/clients/index.jsx ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Clients)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _dashboard_index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../dashboard/index */ "./resources/js/src/components/dashboard/index.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+function Clients() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_dashboard_index__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    children: "Clients"
+  });
+}
+
+/***/ }),
+
+/***/ "./resources/js/src/components/pages/facture/index.jsx":
+/*!*************************************************************!*\
+  !*** ./resources/js/src/components/pages/facture/index.jsx ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Facture)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _dashboard_index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../dashboard/index */ "./resources/js/src/components/dashboard/index.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+function Facture() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_dashboard_index__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    children: "Facture"
+  });
+}
+
+/***/ }),
+
 /***/ "./resources/js/src/components/pages/home/index.js":
 /*!*********************************************************!*\
   !*** ./resources/js/src/components/pages/home/index.js ***!
@@ -5602,7 +5676,198 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function Home() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_dashboard_index__WEBPACK_IMPORTED_MODULE_1__["default"], {});
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_dashboard_index__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    children: "Home"
+  });
+}
+
+/***/ }),
+
+/***/ "./resources/js/src/components/pages/index.js":
+/*!****************************************************!*\
+  !*** ./resources/js/src/components/pages/index.js ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Home": () => (/* reexport safe */ _home_index__WEBPACK_IMPORTED_MODULE_0__["default"]),
+/* harmony export */   "Facture": () => (/* reexport safe */ _facture_index__WEBPACK_IMPORTED_MODULE_1__["default"]),
+/* harmony export */   "Products": () => (/* reexport safe */ _products_index__WEBPACK_IMPORTED_MODULE_2__["default"]),
+/* harmony export */   "Category": () => (/* reexport safe */ _category_index__WEBPACK_IMPORTED_MODULE_3__["default"]),
+/* harmony export */   "Providers": () => (/* reexport safe */ _providers_index__WEBPACK_IMPORTED_MODULE_4__["default"]),
+/* harmony export */   "Payment": () => (/* reexport safe */ _payment_index__WEBPACK_IMPORTED_MODULE_5__["default"]),
+/* harmony export */   "Mark": () => (/* reexport safe */ _mark_index__WEBPACK_IMPORTED_MODULE_6__["default"]),
+/* harmony export */   "Clients": () => (/* reexport safe */ _clients_index__WEBPACK_IMPORTED_MODULE_7__["default"]),
+/* harmony export */   "Register": () => (/* reexport safe */ _register_index__WEBPACK_IMPORTED_MODULE_8__["default"]),
+/* harmony export */   "Login": () => (/* reexport safe */ _login_index__WEBPACK_IMPORTED_MODULE_9__["default"])
+/* harmony export */ });
+/* harmony import */ var _home_index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./home/index */ "./resources/js/src/components/pages/home/index.js");
+/* harmony import */ var _facture_index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./facture/index */ "./resources/js/src/components/pages/facture/index.jsx");
+/* harmony import */ var _products_index__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./products/index */ "./resources/js/src/components/pages/products/index.jsx");
+/* harmony import */ var _category_index__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./category/index */ "./resources/js/src/components/pages/category/index.jsx");
+/* harmony import */ var _providers_index__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./providers/index */ "./resources/js/src/components/pages/providers/index.jsx");
+/* harmony import */ var _payment_index__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./payment/index */ "./resources/js/src/components/pages/payment/index.jsx");
+/* harmony import */ var _mark_index__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./mark/index */ "./resources/js/src/components/pages/mark/index.jsx");
+/* harmony import */ var _clients_index__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./clients/index */ "./resources/js/src/components/pages/clients/index.jsx");
+/* harmony import */ var _register_index__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./register/index */ "./resources/js/src/components/pages/register/index.jsx");
+/* harmony import */ var _login_index__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./login/index */ "./resources/js/src/components/pages/login/index.jsx");
+
+
+
+
+
+
+
+
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/components/pages/login/index.jsx":
+/*!***********************************************************!*\
+  !*** ./resources/js/src/components/pages/login/index.jsx ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Login)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+function Login() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+    children: "Login"
+  });
+}
+
+/***/ }),
+
+/***/ "./resources/js/src/components/pages/mark/index.jsx":
+/*!**********************************************************!*\
+  !*** ./resources/js/src/components/pages/mark/index.jsx ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Mark)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _dashboard_index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../dashboard/index */ "./resources/js/src/components/dashboard/index.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+function Mark() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_dashboard_index__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    children: "Mark"
+  });
+}
+
+/***/ }),
+
+/***/ "./resources/js/src/components/pages/payment/index.jsx":
+/*!*************************************************************!*\
+  !*** ./resources/js/src/components/pages/payment/index.jsx ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Payment)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _dashboard_index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../dashboard/index */ "./resources/js/src/components/dashboard/index.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+function Payment() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_dashboard_index__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    children: "Payment"
+  });
+}
+
+/***/ }),
+
+/***/ "./resources/js/src/components/pages/products/index.jsx":
+/*!**************************************************************!*\
+  !*** ./resources/js/src/components/pages/products/index.jsx ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Products)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _dashboard_index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../dashboard/index */ "./resources/js/src/components/dashboard/index.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+function Products() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_dashboard_index__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    children: "Products"
+  });
+}
+
+/***/ }),
+
+/***/ "./resources/js/src/components/pages/providers/index.jsx":
+/*!***************************************************************!*\
+  !*** ./resources/js/src/components/pages/providers/index.jsx ***!
+  \***************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Providers)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _dashboard_index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../dashboard/index */ "./resources/js/src/components/dashboard/index.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+function Providers() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_dashboard_index__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    children: "Providers"
+  });
+}
+
+/***/ }),
+
+/***/ "./resources/js/src/components/pages/register/index.jsx":
+/*!**************************************************************!*\
+  !*** ./resources/js/src/components/pages/register/index.jsx ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Register)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+function Register() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+    children: "Register"
+  });
 }
 
 /***/ }),
@@ -5692,12 +5957,40 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "routes": () => (/* binding */ routes)
 /* harmony export */ });
-/* harmony import */ var _components_pages_home_index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/pages/home/index */ "./resources/js/src/components/pages/home/index.js");
+/* harmony import */ var _components_pages_index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/pages/index */ "./resources/js/src/components/pages/index.js");
 
 var routes = {
   auth: [{
     path: "/home",
-    element: _components_pages_home_index__WEBPACK_IMPORTED_MODULE_0__["default"]
+    element: _components_pages_index__WEBPACK_IMPORTED_MODULE_0__.Home
+  }, {
+    path: "/clients",
+    element: _components_pages_index__WEBPACK_IMPORTED_MODULE_0__.Clients
+  }, {
+    path: "/category",
+    element: _components_pages_index__WEBPACK_IMPORTED_MODULE_0__.Category
+  }, {
+    path: "/facture",
+    element: _components_pages_index__WEBPACK_IMPORTED_MODULE_0__.Facture
+  }, {
+    path: "/providers",
+    element: _components_pages_index__WEBPACK_IMPORTED_MODULE_0__.Providers
+  }, {
+    path: "/mark",
+    element: _components_pages_index__WEBPACK_IMPORTED_MODULE_0__.Mark
+  }, {
+    path: "/payment",
+    element: _components_pages_index__WEBPACK_IMPORTED_MODULE_0__.Payment
+  }, {
+    path: "/products",
+    element: _components_pages_index__WEBPACK_IMPORTED_MODULE_0__.Products
+  }],
+  root: [{
+    path: '/login',
+    element: _components_pages_index__WEBPACK_IMPORTED_MODULE_0__.Login
+  }, {
+    path: '/register',
+    element: _components_pages_index__WEBPACK_IMPORTED_MODULE_0__.Register
   }]
 };
 

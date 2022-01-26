@@ -1,10 +1,10 @@
 import React from 'react';
 import Dashboard from '../../dashboard/index'
 
-export default function Home() {
+export default function Products() {
   return (
     <Dashboard>
-      Home
+      Products
     </Dashboard>
   )
 }

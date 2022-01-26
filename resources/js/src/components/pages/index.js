@@ -1,0 +1,10 @@
+export { default as Home } from './home/index';
+export { default as Facture } from './facture/index';
+export { default as Products } from './products/index';
+export { default as Category } from './category/index';
+export { default as Providers } from './providers/index';
+export { default as Payment } from './payment/index';
+export { default as Mark } from './mark/index';
+export { default as Clients } from './clients/index';
+export { default as Register } from './register/index';
+export { default as Login } from './login/index';
