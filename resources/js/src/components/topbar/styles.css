@@ -1,7 +1,5 @@
 .topbar {
     background-color: var(--back-color-primary);
-    height: 50px;
-    width: 100%;
 }
 
 .topbar-collapse,
@@ -48,4 +46,14 @@
     font-size: .7rem;
     font-weight: lighter;
     color: var(--font-color-primary);
+}
+
+@media screen and (max-width: 400px) {
+    .topbar-searcher {
+        display: none;
+    }
+
+    .topbar-collapse {
+        justify-content: end;
+    }
 }

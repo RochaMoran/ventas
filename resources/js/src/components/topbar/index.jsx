@@ -1,11 +1,12 @@
 import React from "react";
 import Input from '../input/index'
+import { BiMenu } from 'react-icons/bi'
 
 export default function TopBar() {
     return (
         <div className="topbar">
             <div className="topbar-collapse">
-                <div className="control-input">
+                <div className="control-input topbar-searcher">
                     <Input type="text" placeholder="Busca lo que deseas">
                         <img className="input-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Vector_search_icon.svg/945px-Vector_search_icon.svg.png" />
                     </Input>

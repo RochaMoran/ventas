@@ -5338,6 +5338,40 @@ function Example() {
 
 /***/ }),
 
+/***/ "./resources/js/src/components/dashboard/index.jsx":
+/*!*********************************************************!*\
+  !*** ./resources/js/src/components/dashboard/index.jsx ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Dashboard)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _navbar_index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../navbar/index */ "./resources/js/src/components/navbar/index.jsx");
+/* harmony import */ var _topbar_index__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../topbar/index */ "./resources/js/src/components/topbar/index.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+function Dashboard() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+    className: "dashboard",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_topbar_index__WEBPACK_IMPORTED_MODULE_2__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_navbar_index__WEBPACK_IMPORTED_MODULE_1__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+      className: "dashboard-main",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+        children: "Content"
+      })
+    })]
+  });
+}
+
+/***/ }),
+
 /***/ "./resources/js/src/components/input/index.jsx":
 /*!*****************************************************!*\
   !*** ./resources/js/src/components/input/index.jsx ***!
@@ -5398,7 +5432,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _assets_icons_products_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../assets/icons/products.png */ "./resources/js/src/assets/icons/products.png");
 /* harmony import */ var _assets_icons_categories_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../assets/icons/categories.png */ "./resources/js/src/assets/icons/categories.png");
 /* harmony import */ var _assets_icons_providers_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../assets/icons/providers.png */ "./resources/js/src/assets/icons/providers.png");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/index.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
 
 
 
@@ -5416,60 +5452,84 @@ function NavBar() {
       src: "https://ventopobox.com/wp-content/uploads/2020/11/logo-home.png"
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("ul", {
       className: "navbar-items",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("li", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("li", {
         className: "navbar-item navbar-",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("img", {
-          className: "navbar-item__icon",
-          src: _assets_icons_home_png__WEBPACK_IMPORTED_MODULE_1__["default"]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("p", {
-          className: "navbar-item__name",
-          children: "Inicio"
-        })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("li", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Link, {
+          className: "navbar-item__ancla",
+          to: "/",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("img", {
+            className: "navbar-item__icon",
+            src: _assets_icons_home_png__WEBPACK_IMPORTED_MODULE_1__["default"]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("p", {
+            className: "navbar-item__name",
+            children: "Inicio"
+          })]
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("li", {
         className: "navbar-item navbar-",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("img", {
-          className: "navbar-item__icon",
-          src: _assets_icons_factura_png__WEBPACK_IMPORTED_MODULE_2__["default"]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("p", {
-          className: "navbar-item__name",
-          children: "Facturar"
-        })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("li", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Link, {
+          className: "navbar-item__ancla",
+          to: "/",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("img", {
+            className: "navbar-item__icon",
+            src: _assets_icons_factura_png__WEBPACK_IMPORTED_MODULE_2__["default"]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("p", {
+            className: "navbar-item__name",
+            children: "Facturar"
+          })]
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("li", {
         className: "navbar-item navbar-",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("img", {
-          className: "navbar-item__icon",
-          src: _assets_icons_clients_png__WEBPACK_IMPORTED_MODULE_3__["default"]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("p", {
-          className: "navbar-item__name",
-          children: "Clientes"
-        })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("li", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Link, {
+          className: "navbar-item__ancla",
+          to: "/",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("img", {
+            className: "navbar-item__icon",
+            src: _assets_icons_clients_png__WEBPACK_IMPORTED_MODULE_3__["default"]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("p", {
+            className: "navbar-item__name",
+            children: "Clientes"
+          })]
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("li", {
         className: "navbar-item navbar-",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("img", {
-          className: "navbar-item__icon",
-          src: _assets_icons_products_png__WEBPACK_IMPORTED_MODULE_4__["default"]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("p", {
-          className: "navbar-item__name",
-          children: "Productos"
-        })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("li", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Link, {
+          className: "navbar-item__ancla",
+          to: "/",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("img", {
+            className: "navbar-item__icon",
+            src: _assets_icons_products_png__WEBPACK_IMPORTED_MODULE_4__["default"]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("p", {
+            className: "navbar-item__name",
+            children: "Productos"
+          })]
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("li", {
         className: "navbar-item navbar-",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("img", {
-          className: "navbar-item__icon",
-          src: _assets_icons_categories_png__WEBPACK_IMPORTED_MODULE_5__["default"]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("p", {
-          className: "navbar-item__name",
-          children: "Categorias"
-        })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("li", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Link, {
+          className: "navbar-item__ancla",
+          to: "/",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("img", {
+            className: "navbar-item__icon",
+            src: _assets_icons_categories_png__WEBPACK_IMPORTED_MODULE_5__["default"]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("p", {
+            className: "navbar-item__name",
+            children: "Categorias"
+          })]
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("li", {
         className: "navbar-item navbar-",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("img", {
-          className: "navbar-item__icon",
-          src: _assets_icons_providers_png__WEBPACK_IMPORTED_MODULE_6__["default"]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("p", {
-          className: "navbar-item__name",
-          children: "Proveedores"
-        })]
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Link, {
+          className: "navbar-item__ancla",
+          to: "/",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("img", {
+            className: "navbar-item__icon",
+            src: _assets_icons_providers_png__WEBPACK_IMPORTED_MODULE_6__["default"]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("p", {
+            className: "navbar-item__name",
+            children: "Proveedores"
+          })]
+        })
       })]
     })]
   });
@@ -5477,31 +5537,25 @@ function NavBar() {
 
 /***/ }),
 
-/***/ "./resources/js/src/components/pages/dashboard/index.jsx":
-/*!***************************************************************!*\
-  !*** ./resources/js/src/components/pages/dashboard/index.jsx ***!
-  \***************************************************************/
+/***/ "./resources/js/src/components/pages/home/index.js":
+/*!*********************************************************!*\
+  !*** ./resources/js/src/components/pages/home/index.js ***!
+  \*********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ Dashboard)
+/* harmony export */   "default": () => (/* binding */ Home)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _navbar_index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../navbar/index */ "./resources/js/src/components/navbar/index.jsx");
-/* harmony import */ var _topbar_index__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../topbar/index */ "./resources/js/src/components/topbar/index.jsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _dashboard_index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../dashboard/index */ "./resources/js/src/components/dashboard/index.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
 
-
-
-
-function Dashboard() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_topbar_index__WEBPACK_IMPORTED_MODULE_2__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_navbar_index__WEBPACK_IMPORTED_MODULE_1__["default"], {})]
-  });
+function Home() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_dashboard_index__WEBPACK_IMPORTED_MODULE_1__["default"], {});
 }
 
 /***/ }),
@@ -5524,13 +5578,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 function TopBar() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
     className: "topbar",
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
       className: "topbar-collapse",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-        className: "control-input",
+        className: "control-input topbar-searcher",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_input_index__WEBPACK_IMPORTED_MODULE_1__["default"], {
           type: "text",
           placeholder: "Busca lo que deseas",
@@ -5594,12 +5649,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "routes": () => (/* binding */ routes)
 /* harmony export */ });
-/* harmony import */ var _components_pages_dashboard_index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/pages/dashboard/index */ "./resources/js/src/components/pages/dashboard/index.jsx");
+/* harmony import */ var _components_pages_home_index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/pages/home/index */ "./resources/js/src/components/pages/home/index.js");
 
 var routes = {
   auth: [{
-    path: "/dashboard",
-    element: _components_pages_dashboard_index__WEBPACK_IMPORTED_MODULE_0__["default"]
+    path: "/home",
+    element: _components_pages_home_index__WEBPACK_IMPORTED_MODULE_0__["default"]
   }]
 };
 
@@ -10682,15 +10737,42 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_components_topbar_styles_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! -!../../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!../components/topbar/styles.css */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./resources/js/src/components/topbar/styles.css");
 /* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_components_navbar_styles_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! -!../../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!../components/navbar/styles.css */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./resources/js/src/components/navbar/styles.css");
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_components_dashboard_styles_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! -!../../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!../components/dashboard/styles.css */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./resources/js/src/components/dashboard/styles.css");
 // Imports
+
 
 
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 ___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_components_topbar_styles_css__WEBPACK_IMPORTED_MODULE_1__["default"]);
 ___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_components_navbar_styles_css__WEBPACK_IMPORTED_MODULE_2__["default"]);
+___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_components_dashboard_styles_css__WEBPACK_IMPORTED_MODULE_3__["default"]);
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ":root {\r\n    --back-color-primary: #181818;\r\n    --back-color-secondary: #1D1D1D;\r\n    --back-color-third: #363636;\r\n    --font-color-primary: #909090;\r\n    --color-primary: #3369F3;\r\n    --color-error: #BF3F3F;\r\n}\r\n\r\n.container-input {\r\n    background-color: var(--back-color-third);\r\n    border-radius: 15px;\r\n    padding: 3px 15px;\r\n}\r\n\r\n.input-icon {\r\n    width: 15px;\r\n}\r\n\r\n.input {\r\n    outline: none;\r\n    border: none;\r\n    color: var(--font-color-primary);\r\n    background-color: transparent;\r\n}\r\n\r\nul {\r\n    list-style: none;\r\n    margin: 0;\r\n    padding: 0;\r\n}", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./resources/js/src/components/dashboard/styles.css":
+/*!*************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./resources/js/src/components/dashboard/styles.css ***!
+  \*************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".dashboard {\r\n    width: 100vw;\r\n    height: 100vh;\r\n    display: grid;\r\n    /* grid-template-columns: 17% 83%;\r\n    grid-template-rows: 10% 90% 100% ; */\r\n    grid-template-columns: .3fr 1.7fr;\r\n    grid-template-rows: .1fr .9fr 1fr ;\r\n    grid-template-areas: \r\n    \"nav topbar topbar\"\r\n    \"nav main main\";\r\n\r\n}\r\n\r\n@media screen and (max-width: 1200px) {\r\n    .dashboard {\r\n        grid-template-columns: .4fr 1.6fr;\r\n    }\r\n}\r\n\r\n@media screen and (max-width: 820px) {\r\n    .dashboard {\r\n        grid-template-columns: .5fr 1.5fr;\r\n    }\r\n}\r\n\r\n@media screen and (max-width: 700px) {\r\n    .dashboard {\r\n        grid-template-columns: 1fr;\r\n        grid-template-rows: .1fr .9fr .1fr;\r\n        grid-template-areas: \r\n        \"topbar topbar topbar\"\r\n        \"main main main\"\r\n        \"nav nav nav\";\r\n    }\r\n}\r\n\r\n.navbar {\r\n    grid-area: nav;\r\n}\r\n\r\n.topbar {\r\n   grid-area: topbar;\r\n}\r\n\r\n.dashboard-main {\r\n    grid-area: main;\r\n    color: white;\r\n    background-color: var(--back-color-secondary);\r\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -10714,7 +10796,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".navbar {\r\n    background-color: var(--back-color-primary);\r\n    width: 200px;\r\n    height: calc(100vh - 50px);\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: flex-start;\r\n    align-items: center;\r\n    gap: 20px;\r\n}\r\n\r\n.navbar-logo {\r\n    width: 100px;\r\n}\r\n\r\n.navbar-items {\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    justify-content: center;\r\n    width: 100%;\r\n    gap: 5px;\r\n}\r\n\r\n.navbar-item {\r\n    display: flex;\r\n    flex-direction: row;\r\n    width: 70%;\r\n    justify-content: start;\r\n    align-items: center;\r\n    gap: 15px;\r\n    cursor: pointer;\r\n}\r\n\r\n.navbar-item__icon {\r\n    width: 25px;\r\n}\r\n\r\n.navbar-item__name {\r\n    color: white;\r\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".navbar {\r\n    background-color: var(--back-color-primary);\r\n    height: 100vh;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: flex-start;\r\n    align-items: center;\r\n    gap: 20px;\r\n}\r\n\r\n.navbar-logo {\r\n    width: 100px;\r\n}\r\n\r\n.navbar-items {\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    justify-content: center;\r\n    width: 100%;\r\n    gap: 10px;\r\n}\r\n\r\n.navbar-item {\r\n    padding: 8px 10px;\r\n    width: 70%;\r\n    border-radius: 20px 0 20px 0;\r\n}\r\n\r\n.navbar-item:first-child {\r\n    background-color: blue;\r\n}\r\n\r\n.navbar-item__ancla {\r\n    display: flex;\r\n    flex-direction: row;\r\n    justify-content: start;\r\n    align-items: center;\r\n    gap: 15px;\r\n    text-decoration: none;\r\n}\r\n\r\n.navbar-item__icon {\r\n    width: 25px;\r\n}\r\n\r\n.navbar-item__name {\r\n    color: white;\r\n    margin: 0;\r\n    padding: 0;\r\n}\r\n\r\n@media screen and (max-width: 700px) {\r\n    .navbar {\r\n        height: auto;\r\n    }\r\n    \r\n    .navbar-logo {\r\n        display: none;\r\n    }\r\n\r\n    .navbar-items {\r\n        flex-direction: row;\r\n        gap: 5px;\r\n    }\r\n\r\n    .navbar-item__ancla {\r\n        flex-direction: column;\r\n        gap: 5px;\r\n    }\r\n\r\n    .navbar-item__icon {\r\n        width: 20px;\r\n    }\r\n\r\n    .navbar-item__name {\r\n        font-size: .7rem;\r\n    }\r\n\r\n    .navbar-item {\r\n        padding: 4px 5px;\r\n    }\r\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -10738,7 +10820,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".topbar {\r\n    background-color: var(--back-color-primary);\r\n    height: 50px;\r\n    width: 100%;\r\n}\r\n\r\n.topbar-collapse,\r\n.topbar-profile {\r\n    display: flex;\r\n}\r\n\r\n.topbar-collapse {\r\n    justify-content: space-between;\r\n    align-items: center;\r\n    width: 95%;\r\n    height: 100%;\r\n    margin: auto;\r\n}\r\n\r\n.topbar-profile__image {\r\n    width: 30px;\r\n    height: 30px;\r\n    border-radius: 50%;\r\n}\r\n\r\n.topbar-profile {\r\n    cursor: pointer;\r\n    justify-content: center;\r\n    align-items: center;\r\n    gap: 10px;\r\n}\r\n\r\n.topbar-profile__name,\r\n.topbar-profile__role {\r\n    position: relative;\r\n    margin: 0;\r\n    padding: 0;\r\n}\r\n\r\n.topbar-profile__name {\r\n    top: 3px;\r\n    color: white;\r\n    font-weight: bold;\r\n}\r\n\r\n.topbar-profile__role {\r\n    bottom: 3px;\r\n    font-size: .7rem;\r\n    font-weight: lighter;\r\n    color: var(--font-color-primary);\r\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".topbar {\r\n    background-color: var(--back-color-primary);\r\n}\r\n\r\n.topbar-collapse,\r\n.topbar-profile {\r\n    display: flex;\r\n}\r\n\r\n.topbar-collapse {\r\n    justify-content: space-between;\r\n    align-items: center;\r\n    width: 95%;\r\n    height: 100%;\r\n    margin: auto;\r\n}\r\n\r\n.topbar-profile__image {\r\n    width: 30px;\r\n    height: 30px;\r\n    border-radius: 50%;\r\n}\r\n\r\n.topbar-profile {\r\n    cursor: pointer;\r\n    justify-content: center;\r\n    align-items: center;\r\n    gap: 10px;\r\n}\r\n\r\n.topbar-profile__name,\r\n.topbar-profile__role {\r\n    position: relative;\r\n    margin: 0;\r\n    padding: 0;\r\n}\r\n\r\n.topbar-profile__name {\r\n    top: 3px;\r\n    color: white;\r\n    font-weight: bold;\r\n}\r\n\r\n.topbar-profile__role {\r\n    bottom: 3px;\r\n    font-size: .7rem;\r\n    font-weight: lighter;\r\n    color: var(--font-color-primary);\r\n}\r\n\r\n@media screen and (max-width: 400px) {\r\n    .topbar-searcher {\r\n        display: none;\r\n    }\r\n\r\n    .topbar-collapse {\r\n        justify-content: end;\r\n    }\r\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

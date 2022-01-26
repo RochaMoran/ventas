@@ -1,7 +1,6 @@
 .navbar {
     background-color: var(--back-color-primary);
-    width: 200px;
-    height: calc(100vh - 50px);
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -19,17 +18,26 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    gap: 5px;
+    gap: 10px;
 }
 
 .navbar-item {
+    padding: 8px 10px;
+    width: 70%;
+    border-radius: 20px 0 20px 0;
+}
+
+.navbar-item:first-child {
+    background-color: blue;
+}
+
+.navbar-item__ancla {
     display: flex;
     flex-direction: row;
-    width: 70%;
     justify-content: start;
     align-items: center;
     gap: 15px;
-    cursor: pointer;
+    text-decoration: none;
 }
 
 .navbar-item__icon {
@@ -38,4 +46,38 @@
 
 .navbar-item__name {
     color: white;
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (max-width: 700px) {
+    .navbar {
+        height: auto;
+    }
+    
+    .navbar-logo {
+        display: none;
+    }
+
+    .navbar-items {
+        flex-direction: row;
+        gap: 5px;
+    }
+
+    .navbar-item__ancla {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .navbar-item__icon {
+        width: 20px;
+    }
+
+    .navbar-item__name {
+        font-size: .7rem;
+    }
+
+    .navbar-item {
+        padding: 4px 5px;
+    }
 }

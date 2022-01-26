@@ -1,10 +1,10 @@
-import Dashboard from '../components/pages/dashboard/index'
+import Home from '../components/pages/home/index'
 
 export const routes = {
     auth: [
         {
-            path: "/dashboard",
-            element: Dashboard
-        }
+            path: "/home",
+            element: Home
+        },
     ]
 }
