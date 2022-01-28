@@ -34,6 +34,14 @@ export const routes = {
             path: "/products",
             element: Products
         },
+        {
+            path: '/login',
+            element: Login
+        },
+        {
+            path: '/register',
+            element: Register
+        },
     ],
     root: [
         {
