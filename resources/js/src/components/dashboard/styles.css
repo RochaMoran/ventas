@@ -45,6 +45,13 @@
 
 .dashboard-main {
     grid-area: main;
+    display: grid;
+    place-items: center;
     color: white;
     background-color: var(--back-color-secondary);
+}
+
+.dashboard-main main {
+    width: 95%;
+    height: 93%;
 }

@@ -33,11 +33,16 @@ ul {
 }
 
 .btn,
-.btn-auth {
+.btn-auth,
+.button {
     outline: none;
     border: none;
-    padding: 3px;
     border-radius: 15px;
+}
+
+.btn,
+.btn-auth{
+    padding: 3px;
 }
 
 .btn {
@@ -63,4 +68,5 @@ ul {
 @import url('../components/topbar/styles.css');
 @import url('../components/navbar/styles.css');
 @import url('../components/dashboard/styles.css');
+@import url('../components/barActions/styles.css');
 @import url('./auth.css');

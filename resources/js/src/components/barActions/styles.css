@@ -1,0 +1,31 @@
+.bar-actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 8px 0;
+    background-color: var(--back-color-primary);
+    border-radius: 20px;
+}
+
+.bar-actions__item {
+    font-size: 1rem;
+    background-color: var(--back-color-third);
+    color: var(--font-color-primary);
+    padding: 3px 15px;
+    width: max-content;
+    transition: background-color .3s ease, color .3s ease;
+}
+
+.bar-actions__item span{
+    padding: 0 5px;
+}
+
+@media screen and (min-width: 600px) {
+    .bar-actions__item:hover {
+        background-color: var(--color-primary);
+        color: white;
+    }
+}
