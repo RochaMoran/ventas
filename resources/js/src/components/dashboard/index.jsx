@@ -7,7 +7,11 @@ export default function Dashboard({ children }) {
       <div className="dashboard">
         <TopBar />
         <NavBar />
-        <div className="dashboard-main">{children}</div>
+        <div className="dashboard-main">
+          <main>
+            {children}
+          </main>
+        </div>
       </div>
     );
 }
