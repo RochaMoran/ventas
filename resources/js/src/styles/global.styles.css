@@ -32,12 +32,16 @@ ul {
     padding: 0;
 }
 
-.btn {
-    width: 100%;
+.btn,
+.btn-auth {
     outline: none;
     border: none;
     padding: 3px;
     border-radius: 15px;
+}
+
+.btn {
+    width: 100%;
 }
 
 .btn-primary,

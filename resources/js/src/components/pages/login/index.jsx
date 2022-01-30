@@ -22,7 +22,7 @@ export default function Login() {
             <ControlInput placeholder="Ingrese su contraseña" />
           </div>
           <Button className="btn btn-primary" text="Iniciar Sesión" />
-          <Button onClick={() => navigate('/register')} className="btn btn-secondary" text="Registrarse" />
+          <Button onClick={() => navigate('/register')} className="btn btn-secondary btn-auth__secondary" text="Registrarse" />
           <div className='auth-or__container'>
             <p>or</p>
             <button className='btn'>
@@ -30,7 +30,11 @@ export default function Login() {
             </button>
           </div>
         </form>
-        <img className='auth-image' src={RegisterImage} alt="register" />
+        <div className="auth-container__image">
+          <img className='auth-image auth-image__secondary' src={RegisterImage} alt="register" />
+          <p className='auth-paragraph'>¿Aún no te registras?</p>
+          <Button onClick={() => navigate('/register')} className="btn-auth" text="Registrarse" />
+        </div>
       </div>
     </div>
   )
