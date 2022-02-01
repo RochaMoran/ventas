@@ -68,5 +68,6 @@ ul {
 @import url('../components/topbar/styles.css');
 @import url('../components/navbar/styles.css');
 @import url('../components/dashboard/styles.css');
+@import url('../components/table/styles.css');
 @import url('../components/barActions/styles.css');
 @import url('./auth.css');
