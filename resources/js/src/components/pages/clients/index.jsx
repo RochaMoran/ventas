@@ -3,11 +3,17 @@ import Dashboard from "../../dashboard/index";
 import BarActions from "../../barActions";
 import Table from "../../table";
 import TableHead from "../../tableHead";
+import Modal from "../../modal/index";
+import Input from "../../input/index";
+import Button from "../../button/index";
+import useModal from "../../hooks/useModal"
 
 export default function Clients() {
+    const {show, toggleModal} = useModal()
+
     return (
         <Dashboard>
-            <BarActions />
+            <BarActions create={toggleModal} />
             <Table>
                 <TableHead columns={["#", "ID", "TELEFONO", "NOMBRE"]} />
                 <tbody>
@@ -109,6 +115,20 @@ export default function Clients() {
                     </tr>
                 </tbody>
             </Table>
+            <Modal title="Crear Cliente" show={show} toggleModal={toggleModal}>
+                <form>
+                    <div className="form-input">
+                        <label>Nombre</label>
+                        <Input placeholder="Ingrese su nombre" cls="modal-form__input" />
+                    </div>
+                    <div className="form-input">
+                        <label>Telefono</label>
+                        <Input placeholder="Ingrese su telefono" cls="modal-form__input" />
+                    </div>
+                    <Button cls="btn-send" text="Enviar"/>
+                    <Button cls="btn-cancel" text="Cancelar"/>
+                </form>
+            </Modal>
         </Dashboard>
     );
 }
