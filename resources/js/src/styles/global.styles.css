@@ -65,9 +65,34 @@ ul {
     background-color: transparent
 }
 
+.form-input,
+.btn-send,
+.btn-cancel {
+    margin-top: 15px;
+}
+
+.btn-send,
+.btn-cancel {
+    color: white;
+}
+
+.btn-send {
+    background-color: var(--color-primary);
+}
+
+.btn-cancel {
+    background-color: var(--color-error);
+}
+
+.form-input label {
+    color: white;
+    font-weight: 600;
+}
+
 @import url('../components/topbar/styles.css');
 @import url('../components/navbar/styles.css');
 @import url('../components/dashboard/styles.css');
 @import url('../components/table/styles.css');
 @import url('../components/barActions/styles.css');
+@import url('../components/modal/styles.css');
 @import url('./auth.css');
