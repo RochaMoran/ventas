@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom'
-import { HiHome, HiDocumentText, HiShoppingCart } from 'react-icons/hi'
+import { HiDocumentText, HiShoppingCart } from 'react-icons/hi'
 import { TiGroup } from 'react-icons/ti'
-import { MdCategory } from 'react-icons/md'
+import { MdCategory, MdPayment } from 'react-icons/md'
 import { FaPeopleArrows } from 'react-icons/fa'
 
 export default function NavBar() {
@@ -13,16 +13,16 @@ export default function NavBar() {
         <img className='navbar-logo' src="https://ventopobox.com/wp-content/uploads/2020/11/logo-home.png"/>
       </Link>
       <ul className='navbar-items'>
-        <li className={location.pathname === '/home' ? 'navbar-item navbar-item__active' : 'navbar-item'}>
-          <Link className="navbar-item__ancla" to="/home">
-            <HiHome className='navbar-item__icon'/>
-            <p className='navbar-item__name'>Inicio</p>
-          </Link>
-        </li>
         <li className={location.pathname === '/facture' ? 'navbar-item navbar-item__active' : 'navbar-item'}>
           <Link className="navbar-item__ancla" to="/facture">
             <HiDocumentText className='navbar-item__icon'/>
             <p className='navbar-item__name'>Facturar</p>
+          </Link>
+        </li>
+        <li className={location.pathname === '/payment' ? 'navbar-item navbar-item__active' : 'navbar-item'}>
+          <Link className="navbar-item__ancla" to="/payment">
+            <MdPayment className='navbar-item__icon'/>
+            <p className='navbar-item__name'>Tipo de pagos</p>
           </Link>
         </li>
         <li className={location.pathname === '/clients' ? 'navbar-item navbar-item__active' : 'navbar-item'}>
