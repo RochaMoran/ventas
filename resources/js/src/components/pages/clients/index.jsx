@@ -6,7 +6,7 @@ import TableHead from "../../tableHead";
 import Modal from "../../modal/index";
 import Input from "../../input/index";
 import Button from "../../button/index";
-import useModal from "../../hooks/useModal"
+import { useModal } from "../../hooks/index"
 
 export default function Clients() {
     const {show, toggleModal} = useModal()

@@ -57,6 +57,77 @@
     font-weight: bold;
 }
 
-.modal-form__input {
+.modal-create__select {
+    display: block;
+    padding: 5px;
+    width: 100%;
+}
+
+.modal-form__input,
+.modal-create__select {
     width: 270px;
+}
+
+.modal-bar {
+    position: relative;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    margin-top: 5px;
+}
+
+.modal-bar::before,
+.modal-bar::after {
+    background-color: #fff;
+}
+
+.modal-bar::before,
+.modal-bar::after,
+.modal-progress__bar::after,
+.modal-progress__bar::before,
+.modal-progress__bar-complete::before,
+.modal-progress__bar-complete::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    transform: translateY(-25%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.modal-progress__bar::after,
+.modal-progress__bar::before,
+.modal-progress__bar-complete::before,
+.modal-progress__bar-complete::after {
+    background-color: var(--color-primary);
+    z-index: 5;
+}
+
+.modal-bar::before,
+.modal-progress__bar::before,
+.modal-progress__bar-complete::before {
+    left: -3px;
+}
+.modal-bar::after,
+.modal-progress__bar::after,
+.modal-progress__bar-complete::after {
+    right: -3px;
+}
+
+.modal-progress__bar {
+    width: 50%;
+}
+
+.modal-progress__bar,
+.modal-progress__bar-complete {
+    position: relative;
+    height: 100%;
+    background-color: var(--color-primary);
+    transition: width .3s ease;
+}
+
+.modal-progress__bar-complete {
+    width: 100%;
 }
