@@ -15,7 +15,7 @@
     background-color: var(--back-color-third);
     color: var(--font-color-primary);
     padding: 3px 15px;
-    width: max-content;
+    height: max-content;
     transition: background-color .3s ease, color .3s ease;
 }
 
@@ -27,5 +27,16 @@
     .bar-actions__item:hover {
         background-color: var(--color-primary);
         color: white;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .bar-actions {
+        flex-wrap: wrap;
+    }
+    
+    .bar-actions__item {
+        width: 105px;
+        font-size: .8rem;    
     }
 }

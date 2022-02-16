@@ -38,7 +38,6 @@
 
 .table {
     margin-top: 20px;
-    /* border-collapse: separate; */
 }
 
 .table-head th,
@@ -62,12 +61,22 @@ tbody {
 
 @media screen and (max-width: 700px) {
     .table-component {
-        height: 64vh;
+        height: 70vh;
     }
 }
 
 @media screen and (max-width: 500px) {
     .table-component {
-        height: 60vh;
+        height: 72vh;
+    }
+}
+
+@media screen and (max-width: 385px) {
+    .input-table {
+        width: 140px;
+    }
+
+    .table-header__select {
+        width: 120px;
     }
 }
