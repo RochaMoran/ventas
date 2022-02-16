@@ -55,3 +55,14 @@
     width: 95%;
     height: 93%;
 }
+
+@media screen and (max-width: 500px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+        grid-template-rows: 10% 84% 6%;
+    }
+
+    .dashboard-main main {
+        height: 100%;
+    }
+}

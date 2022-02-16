@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300&display=swap');
 
 :root {
     --back-color-primary: #181818;
@@ -89,6 +88,10 @@ ul {
     font-weight: 600;
 }
 
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300&display=swap');
+
+/* STYLESHEET */
 @import url('../components/topbar/styles.css');
 @import url('../components/navbar/styles.css');
 @import url('../components/dashboard/styles.css');
@@ -96,3 +99,4 @@ ul {
 @import url('../components/barActions/styles.css');
 @import url('../components/modal/styles.css');
 @import url('./auth.css');
+@import url('./normalize.css');

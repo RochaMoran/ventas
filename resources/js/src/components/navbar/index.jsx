@@ -22,7 +22,7 @@ export default function NavBar() {
         <li className={location.pathname === '/payment' ? 'navbar-item navbar-item__active' : 'navbar-item'}>
           <Link className="navbar-item__ancla" to="/payment">
             <MdPayment className='navbar-item__icon'/>
-            <p className='navbar-item__name'>Tipo de pagos</p>
+            <p className='navbar-item__name'>T. Pagos</p>
           </Link>
         </li>
         <li className={location.pathname === '/clients' ? 'navbar-item navbar-item__active' : 'navbar-item'}>
