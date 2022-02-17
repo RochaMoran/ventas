@@ -92,11 +92,12 @@ ul {
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300&display=swap');
 
 /* STYLESHEET */
+@import url('./normalize.css');
 @import url('../components/topbar/styles.css');
 @import url('../components/navbar/styles.css');
 @import url('../components/dashboard/styles.css');
 @import url('../components/table/styles.css');
 @import url('../components/barActions/styles.css');
 @import url('../components/modal/styles.css');
+@import url('../components/pages/facture/styles.css');
 @import url('./auth.css');
-@import url('./normalize.css');
