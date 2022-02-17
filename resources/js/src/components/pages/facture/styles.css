@@ -1,0 +1,137 @@
+.facture {
+    margin: 15px 0;
+}
+
+.facture-forms {
+    display: flex;
+    gap: 10px;
+}
+
+.facture-forms__item {
+    width: 50%;
+    background-color: var(--back-color-primary);
+    border-radius: 20px;
+    padding: 15px;
+    height: max-content;
+}
+
+.facture-form__controlinput {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+}
+
+.facture-form__input,
+.facture-form__select {
+    width: 100%;
+}
+
+.facture-form__select {
+    padding: 4px;
+}
+
+.facture-other__options {
+    width: max-content;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.facture-option__button  {
+    background-color: transparent;
+    color: var(--font-color-primary);
+    margin: 0 10px;
+    border: none;
+    outline: none;
+}
+
+.facture-option__button p {
+    margin: 2px 0;
+}
+
+.facture-number {
+    font-weight: 500;
+}
+
+.facture-number span {
+    font-weight: 300;
+    color: var(--color-primary);
+}
+
+.facture-footer {
+    margin: 10px 0;
+}
+
+.facture-footer > .facture-forms__item {
+    height: auto;
+}
+
+.facture-footer__buttons {
+    display: grid;
+    place-items: center;
+}
+
+.facture-footer__button {
+    padding: 10px 0;
+    color: white;
+    width: 95%;
+}
+
+.facture-button__cancel {
+    background-color: var(--color-error);
+}
+
+.facture-button_finish {
+    background-color: var(--color-primary);
+}
+
+.facture-footer__subtotal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.facture-subtotal,
+.facture-discount {
+    color: white;
+    font-weight: 600;
+}
+
+.facture-subtotal span,
+.facture-total span {
+    color: var(--color-primary);
+}
+
+.facture-discount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.facture-discount > .facture-descount__input {
+    background-color: var(--back-color-third);
+    color: var(--font-color-primary);
+    padding: 5px 10px;
+    border-radius: 15px;
+    width: 100%;
+}
+
+.facture-total {
+    font-size: 1.8rem;
+    text-align: end;
+}
+
+@media screen and (max-width: 830px) {
+    .facture-forms {
+        flex-direction: column;
+    }
+
+    .facture-forms__item {
+        width: 100%;
+    }
+
+    .facture-footer__buttons {
+        gap: 10px;
+    }
+}
