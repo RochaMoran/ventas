@@ -4,7 +4,10 @@
 
 .topbar-collapse,
 .topbar-profile {
+    position: relative;
+    z-index: 10;
     display: flex;
+    background-color: transparent;
 }
 
 .topbar-collapse {
@@ -42,7 +45,6 @@
 }
 
 .topbar-profile__role {
-    bottom: 3px;
     font-size: .7rem;
     font-weight: lighter;
     color: var(--font-color-primary);
@@ -51,6 +53,54 @@
 .input-icon {
     color: var(--font-color-primary);
     font-size: 1.5rem;
+}
+
+.topbar-dropOptions__hidden {
+    display: none;
+}
+
+@keyframes animation-dropOptions {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.topbar-dropOptions {
+    display: block;
+    position: absolute;
+    top: 50px;
+    right: -15px;
+}
+
+.topbar-dropOptions ul {
+    background-color: var(--back-color-primary);
+    padding: 15px 20px;
+    animation: animation-dropOptions .3s ease forwards;
+}
+
+.topbar-dropOptions ul li a,
+.topbar-dropOptions ul li button {
+    color: white;
+}
+
+.topbar-dropOptions ul li {
+    padding: 10px 5px;
+}
+
+.topbar-dropOptions ul li a {
+    text-decoration: none;
+}
+
+.topbar-dropOptions ul li button {
+    outline: none;
+    border: none;
+    background-color: var(--color-primary);
+    margin: 0;
+    padding: 5px 15px;
+    border-radius: 5px;
 }
 
 @media screen and (max-width: 400px) {

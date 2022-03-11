@@ -1,30 +1,47 @@
 import React from 'react';
-import ControlInput from '../../controlInput'
 import Button from '../../button'
 import GoogleIcon from '../../../assets/icons/google-icon.png'
 import RegisterImage from '../../../assets/register-image.svg'
 import { useNavigate } from 'react-router-dom'
 import { useUser } from '../../hooks/index'
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { loginSchema } from '../../../helpers/validates/auth'
+import MessageError from '../../messageError';
 
 export default function Login() {
   const navigate = useNavigate();
   const {login} = useUser()
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(loginSchema),
+  });
+
+  const onSubmit = (data) => {
+    login();
+    navigate('/')
+  };
 
   return (
     <div className='auth'>
       <div className='auth-container'>
-        <form className='auth-form' onSubmit={() => login()}>
+        <form className='auth-form' onSubmit={handleSubmit(onSubmit)}>
           <h3 className='auth-title'>Iniciar Sesión</h3>
           <div className='auth-controlInput'>
             <label>Correo Eléctronico</label>
-            <ControlInput placeholder="Ingrese su email" />
+            <input className='input input-auth' placeholder="Ingrese su email" {...register("email")} />
           </div>
+          <MessageError error={errors?.email?.message} />
           <div className='auth-controlInput'>
             <label>Contraseña</label>
-            <ControlInput placeholder="Ingrese su contraseña" />
+            <input className='input input-auth't placeholder="Ingrese su contraseña" {...register("password")} />
           </div>
+          <MessageError error={errors?.password?.message} />
           <Button className="btn btn-primary" text="Iniciar Sesión" />
-          <Button onClick={() => navigate('/register')} className="btn btn-secondary btn-auth__secondary" text="Registrarse" />
+          <Button type="submit" className="btn btn-secondary btn-auth__secondary" text="Registrarse" />
           <div className='auth-or__container'>
             <p>or</p>
             <button className='btn'>
