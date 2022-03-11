@@ -1,4 +1,5 @@
 import * as yup from "yup";
+import axios from 'axios'
 
 export const registerSchema = yup
   .object({
@@ -16,6 +17,10 @@ export const registerSchema = yup
       .required("Se requiere tu contraseña")
       .min(7, "Su contraseña debe tener un minimo de 7 caracteres")
       .max(255, "Su contraseña debe tener un maximo de 255 caracteres"),
+    password_confirmation: yup
+    .string()
+    .required("El campo confirmar contraseña es requerido")
+    .oneOf([yup.ref("password")], "Las contraseñas no coinciden"),
   })
   .required();
 
@@ -32,3 +37,11 @@ export const loginSchema = yup
       .max(255, "Su contraseña debe tener un maximo de 255 caracteres"),
   })
   .required();
+
+export const registerAuth = async (body, type) => {
+  const url = type === "register" ? '/api/register' : '/api/login';
+  const peticion = await axios.post(url, body);
+  const {data} = peticion;
+
+  return data;
+}
