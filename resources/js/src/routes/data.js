@@ -3,7 +3,7 @@ import { Home, Clients, Category, Facture, Login, Mark, Payment, Products, Provi
 export const routes = {
     auth: [
         {
-            path: "/home",
+            path: "/",
             element: Home
         },
         {
@@ -45,7 +45,7 @@ export const routes = {
     ],
     root: [
         {
-            path: '/login',
+            path: '/',
             element: Login
         },
         {

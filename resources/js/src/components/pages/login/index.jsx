@@ -3,15 +3,17 @@ import ControlInput from '../../controlInput'
 import Button from '../../button'
 import GoogleIcon from '../../../assets/icons/google-icon.png'
 import RegisterImage from '../../../assets/register-image.svg'
-import { useNavigate   } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+import { useUser } from '../../hooks/index'
 
 export default function Login() {
   const navigate = useNavigate();
+  const {login} = useUser()
 
   return (
     <div className='auth'>
       <div className='auth-container'>
-        <form className='auth-form'>
+        <form className='auth-form' onSubmit={() => login()}>
           <h3 className='auth-title'>Iniciar Sesión</h3>
           <div className='auth-controlInput'>
             <label>Correo Eléctronico</label>

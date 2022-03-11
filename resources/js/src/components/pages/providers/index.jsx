@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Dashboard from '../../dashboard/index'
 import BarActions from "../../barActions";
 import Table from "../../table";
@@ -10,10 +10,11 @@ import { useModal } from "../../hooks/index"
 
 export default function Providers() {
   const {show, toggleModal} = useModal()
+  const [action, setAction] = useState("show")
 
   return (
     <Dashboard>
-       <BarActions create={toggleModal} />
+       <BarActions action={action} setAction={setAction} create={toggleModal} />
       <Table>
         <TableHead columns={["#", "ID", "NOMBRE"]}/>
       </Table>
