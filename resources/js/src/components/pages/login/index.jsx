@@ -3,7 +3,7 @@ import Button from '../../button'
 import GoogleIcon from '../../../assets/icons/google-icon.png'
 import RegisterImage from '../../../assets/register-image.svg'
 import { useNavigate } from 'react-router-dom'
-import { useUser } from '../../hooks/index'
+import { useAuth } from '../../hooks/index'
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { loginSchema } from '../../../helpers/validates/auth'
@@ -11,7 +11,7 @@ import MessageError from '../../messageError';
 
 export default function Login() {
   const navigate = useNavigate();
-  const {login} = useUser()
+  const { onSubmit, error } = useAuth("login")
   const {
     register,
     handleSubmit,
@@ -19,11 +19,6 @@ export default function Login() {
   } = useForm({
     resolver: yupResolver(loginSchema),
   });
-
-  const onSubmit = (data) => {
-    login();
-    navigate('/')
-  };
 
   return (
     <div className='auth'>
@@ -37,11 +32,12 @@ export default function Login() {
           <MessageError error={errors?.email?.message} />
           <div className='auth-controlInput'>
             <label>Contraseña</label>
-            <input className='input input-auth't placeholder="Ingrese su contraseña" {...register("password")} />
+            <input className='input input-auth' placeholder="Ingrese su contraseña" {...register("password")} />
           </div>
           <MessageError error={errors?.password?.message} />
           <Button className="btn btn-primary" text="Iniciar Sesión" />
           <Button type="submit" className="btn btn-secondary btn-auth__secondary" text="Registrarse" />
+          {error && <MessageError error={error} />}
           <div className='auth-or__container'>
             <p>or</p>
             <button className='btn'>

@@ -39,11 +39,18 @@ class UserController extends Controller
             $user->google = $request->google;
             $user->save();
 
+            $token = $user->createToken("auth_token")->plainTextToken;
+
             //retornar response in format json.
             return response()->json([
                 "ok" => true,
                 "message" => "Usuario creado exitosamente",
-                "data" => $user
+                "data" => [
+                    'email' => $user->email,
+                    'name' => $user->name,
+                    'id' => $user->id,
+                    'token' => $token
+                ]
             ], 200);
 
         } catch (Exception $e) {
@@ -83,7 +90,12 @@ class UserController extends Controller
                     return response()->json([
                         "ok" => true,
                         "message" => "Inicio de sesion exitoso",
-                        "token" => $token
+                        "data" => [
+                            'email' => $user->email,
+                            'name' => $user->name,
+                            'id' => $user->id,
+                            'token' => $token
+                        ]
                     ], 200);
 
                 } else {

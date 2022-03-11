@@ -2,16 +2,16 @@ import React from 'react';
 import Button from '../../button'
 import GoogleIcon from '../../../assets/icons/google-icon.png'
 import RegisterImage from '../../../assets/register-image-2.svg'
-import { useNavigate   } from 'react-router-dom'
 import { useForm } from "react-hook-form";
-import { useUser } from '../../hooks/index'
+import { useAuth } from '../../hooks/index'
 import { yupResolver } from "@hookform/resolvers/yup";
 import { registerSchema } from '../../../helpers/validates/auth'
+import { useNavigate   } from 'react-router-dom'
 import MessageError from '../../messageError';
 
 export default function Register() {
   const navigate = useNavigate ();
-  const {login} = useUser()
+  const { onSubmit, error } = useAuth("register")
   const {
     register,
     handleSubmit,
@@ -19,11 +19,6 @@ export default function Register() {
   } = useForm({
     resolver: yupResolver(registerSchema),
   });
-
-  const onSubmit = (data) => {
-    login();
-    navigate('/')
-  };
 
   return (
     <div className='auth'>
@@ -50,8 +45,14 @@ export default function Register() {
             <input className='input input-auth' placeholder="Ingrese su contraseña" {...register("password")} />
           </div>
           <MessageError error={errors?.password?.message} />
+          <div className='auth-controlInput'>
+            <label>Confirmar Contraseña</label>
+            <input className='input input-auth' placeholder="Ingrese su contraseña nuevamente" {...register("password_confirmation")} />
+          </div>
+          <MessageError error={errors?.password_confirmation?.message} />
           <Button type="submit" className="btn btn-primary" text="Registrarse" />
-          <Button onClick={() => navigate('/login')} className="btn btn-secondary btn-auth__secondary" text="Iniciar Sesión" />
+          <Button onClick={() => navigate('/')} className="btn btn-secondary btn-auth__secondary" text="Iniciar Sesión" />
+          {error && <MessageError error={error} />}
           <div className='auth-or__container'>
             <p>or</p>
             <button className='btn'>

@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import { BiSearch } from 'react-icons/bi'
 import ControlInput from "../controlInput";
 import { Link } from 'react-router-dom'
+import { useUser } from '../hooks/index'
 
 export default function TopBar() {
     const [show, setShow] = useState(false)
+    const { logout } = useUser()
 
     return (
         <div className="topbar">
@@ -32,7 +34,7 @@ export default function TopBar() {
                             <Link to="/">Configuraciones</Link>
                         </li>
                         <li>
-                            <button>
+                            <button onClick={() => logout()}>
                                 Cerrar Sesión
                             </button>
                         </li>
