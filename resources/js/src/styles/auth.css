@@ -114,6 +114,14 @@
     width: 25px;
 }
 
+.auth-controlInput > .input-auth {
+    display: block;
+    width: 100%;
+    padding: 6px 10px;
+    border-radius: 15px;
+    background-color: var(--back-color-third);
+}
+
 @media screen and (max-width: 1050px) {
     .auth-container {
         width: 70%;

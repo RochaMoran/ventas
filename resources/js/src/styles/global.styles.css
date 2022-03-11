@@ -99,5 +99,6 @@ ul {
 @import url('../components/table/styles.css');
 @import url('../components/barActions/styles.css');
 @import url('../components/modal/styles.css');
+@import url('../components/messageError/styles.css');
 @import url('../components/pages/facture/styles.css');
 @import url('./auth.css');
