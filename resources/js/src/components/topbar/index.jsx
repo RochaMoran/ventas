@@ -6,7 +6,7 @@ import { useUser } from '../hooks/index'
 
 export default function TopBar() {
     const [show, setShow] = useState(false)
-    const { logout } = useUser()
+    const { logout, jwt } = useUser()
 
     return (
         <div className="topbar">
@@ -21,8 +21,8 @@ export default function TopBar() {
                         alt="steven-universe"
                     />
                     <div className="topbar-profile__content">
-                        <p className="topbar-profile__name">Steven Rocha</p>
-                        <span className="topbar-profile__role">Administrador</span>
+                        <p className="topbar-profile__name">{jwt && jwt.name || jwt.data.name}</p>
+                        <span className="topbar-profile__role">role</span>
                     </div>
                 </button>
                 <div className={show ? "topbar-dropOptions" : "topbar-dropOptions__hidden"}>

@@ -42,12 +42,12 @@ export default function Register() {
           <MessageError error={errors?.email?.message} />
           <div className='auth-controlInput'>
             <label>Contraseña</label>
-            <input className='input input-auth' placeholder="Ingrese su contraseña" {...register("password")} />
+            <input className='input input-auth' type="password" placeholder="Ingrese su contraseña" {...register("password")} />
           </div>
           <MessageError error={errors?.password?.message} />
           <div className='auth-controlInput'>
             <label>Confirmar Contraseña</label>
-            <input className='input input-auth' placeholder="Ingrese su contraseña nuevamente" {...register("password_confirmation")} />
+            <input className='input input-auth' type="password" placeholder="Ingrese su contraseña nuevamente" {...register("password_confirmation")} />
           </div>
           <MessageError error={errors?.password_confirmation?.message} />
           <Button type="submit" className="btn btn-primary" text="Registrarse" />

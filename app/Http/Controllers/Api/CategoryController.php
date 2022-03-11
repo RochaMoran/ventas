@@ -61,7 +61,7 @@ class CategoryController extends Controller
             return response()->json([
                 "ok" => true,
                 "message" => "Categoria creada exitosamente",
-                "data" => $category
+                "data" => Category::all()
             ], 200);
         } catch (Exception $e) {
             //if exists an error unexpected

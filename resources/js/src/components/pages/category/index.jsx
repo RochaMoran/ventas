@@ -4,13 +4,25 @@ import BarActions from "../../barActions";
 import Table from "../../table";
 import TableHead from "../../tableHead";
 import Modal from "../../modal/index";
-import Input from "../../input/index";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { categorySchema } from '../../../helpers/validates/models'
 import Button from "../../button/index";
-import { useModal } from "../../hooks/index"
+import { useModal, useData } from "../../hooks/index"
+import MessageError from "../../messageError";
 
 export default function Category() {
     const {show, toggleModal} = useModal()
     const [action, setAction] = useState("show")
+    const { error, data, errorData, onSubmit } = useData('category/create', 'category/all')
+
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+      } = useForm({
+        resolver: yupResolver(categorySchema),
+      });
 
     return (
         <Dashboard>
@@ -18,34 +30,34 @@ export default function Category() {
             <Table>
                 <TableHead columns={["#", "ID", "NOMBRE"]} />
                 <tbody>
-                    <tr className="table-item">
-                        <td>1</td>
-                        <td>43</td>
-                        <td>Maria Anders</td>
-                    </tr>
-                    <tr className="table-item">
-                        <td>1</td>
-                        <td>43</td>
-                        <td>Maria Anders</td>
-                    </tr>
-                    <tr className="table-item">
-                        <td>1</td>
-                        <td>43</td>
-                        <td>Maria Anders</td>
-                    </tr>
-                    <tr className="table-item">
-                        <td>1</td>
-                        <td>43</td>
-                        <td>Maria Anders</td>
-                    </tr>
+                    {
+                        errorData ? 
+                        (
+                            <MessageError error={errorData} /> 
+                        ) 
+                        : 
+                        (
+                            data ? data.map((item, i) => 
+                                <tr className="table-item" key={item.id}>
+                                    <td>{i}</td>
+                                    <td>{item.id}</td>
+                                    <td>{item.name_category}</td>
+                                </tr>
+                            )
+                             : <MessageError error="Cargando..." /> 
+                        )
+                    }
                 </tbody>
             </Table>
             <Modal title="Crear Categoria" show={show} toggleModal={toggleModal}>
-                <form>
+                <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="form-input">
                         <label>Nombre</label>
-                        <Input placeholder="Ingrese nombre categoria" cls="modal-form__input" />
+                        <div className='container-input'>
+                            <input placeholder="Ingrese nombre categoria" className="input modal-form__input" {...register("name_category")} />
+                        </div>
                     </div>
+                    <MessageError error={errors?.name_category?.message || error && error} />
                     <Button cls="btn-send" text="Enviar"/>
                     <Button type="button" cls="btn-cancel" text="Cancelar" onClick={toggleModal}/>
                 </form>
