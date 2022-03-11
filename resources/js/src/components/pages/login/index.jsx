@@ -32,7 +32,7 @@ export default function Login() {
           <MessageError error={errors?.email?.message} />
           <div className='auth-controlInput'>
             <label>Contraseña</label>
-            <input className='input input-auth' placeholder="Ingrese su contraseña" {...register("password")} />
+            <input className='input input-auth' type="password" placeholder="Ingrese su contraseña" {...register("password")} />
           </div>
           <MessageError error={errors?.password?.message} />
           <Button className="btn btn-primary" text="Iniciar Sesión" />

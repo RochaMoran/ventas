@@ -20,6 +20,7 @@ export default function useUser() {
     return {
         isLogged: Boolean(jwt),
         login,
-        logout
+        logout,
+        jwt
     }
 }
