@@ -26,7 +26,7 @@ export default function Register() {
         <div className="auth-container__image">
           <img className='auth-image' src={RegisterImage} alt="register" />
           <p className='auth-paragraph'>¿Ya tienes una cuenta?</p>
-          <Button onClick={() => navigate('/login')} className="btn-auth" text="Iniciar Sesión" />
+          <Button onClick={() => navigate('/')} className="btn-auth" text="Iniciar Sesión" />
         </div>
         <form className='auth-form' onSubmit={handleSubmit(onSubmit)}>
           <h3 className='auth-title'>Registrarse</h3>
